@@ -55,7 +55,7 @@
             >Home</mj-navbar-link
           >
           <mj-navbar-link
-            href="https://thomas-clothing.onrender.com/faqs"
+            href="https://thomas-clothing.onrender.com/faq"
             font-size="12px"
             text-transform="capitalize"
             padding="0 8px"
