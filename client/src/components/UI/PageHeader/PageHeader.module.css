@@ -1,0 +1,51 @@
+.page_header {
+  background-color: #fafafa;
+  height: var(--page-header-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 0 16px;
+}
+
+.page_header h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 27px;
+  font-weight: 600;
+  color: #212121;
+}
+
+.page_header p {
+  width: 80%;
+  max-width: 1400px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #212121;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 991.8px) {
+  .page_header h1 {
+    font-size: 22px;
+  }
+  .page_header p {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .page_header h1 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 567px) {
+  .page_header h1 {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+}

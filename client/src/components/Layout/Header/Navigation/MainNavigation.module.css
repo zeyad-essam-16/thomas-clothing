@@ -1,0 +1,39 @@
+.main_navigation {
+  flex: 1;
+  padding-left: 30px;
+}
+
+.main_navigation ul {
+  display: flex;
+  align-items: center;
+}
+
+.main_navigation ul li a {
+  padding: 20px 15px;
+  color: #000;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.main_navigation ul li a:hover {
+  color: #757575;
+  text-decoration: underline;
+}
+
+@media (max-width: 1199.98px) {
+  .main_navigation {
+    padding-left: 20px;
+  }
+
+  .main_navigation ul li a {
+    padding: 20px 8px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .main_navigation {
+    display: none;
+  }
+}

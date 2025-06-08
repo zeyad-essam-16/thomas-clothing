@@ -1,0 +1,52 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "commerce shop api",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "render-postbuild": "cd client && npm install && npm run build"
+  },
+  "author": "ziad essam",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "compression": "^1.7.4",
+    "connect-mongodb-session": "^3.1.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "express-validator": "^6.14.2",
+    "gray-matter": "^4.0.3",
+    "handlebars": "^4.7.7",
+    "helmet": "^6.0.1",
+    "mjml": "^4.13.0",
+    "mjml-cli": "^4.13.0",
+    "mongoose": "^6.7.2",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.8.0",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "nodemon": "^2.0.20",
+    "passport": "^0.6.0",
+    "passport-github": "^1.1.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "passport-twitter": "^1.0.4",
+    "redis": "^4.6.5",
+    "sharp": "^0.31.3",
+    "stripe": "^11.14.0"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "client/*"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}

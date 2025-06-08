@@ -1,0 +1,142 @@
+.page_wrapper {
+  min-height: calc(100vh - var(--header-height) - var(--top-slider-height));
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #fff;
+}
+
+.page_wrapper .form_Wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page_wrapper .form_Wrapper .form_inner {
+  width: min(100%, 400px);
+  padding: 10px 20px 30px;
+  display: flex;
+  flex-direction: column;
+  color: #0c232f;
+}
+
+.form_Wrapper .form_inner h2 {
+  font-size: 40px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 12px;
+}
+
+.form_Wrapper .form_inner > p {
+  text-align: center;
+  font-weight: 500;
+  color: #212121;
+  margin-bottom: 20px;
+}
+
+.form_Wrapper .form_inner form {
+  display: flex;
+  flex-direction: column;
+  /* margin-bottom: 15px; */
+}
+
+.form_Wrapper .form_inner form button {
+  background-color: #111727;
+}
+
+.form_Wrapper .form_inner form .forget_password {
+  font-weight: 600;
+  color: #374c5e;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.form_Wrapper .seperate {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 15px 0 20px;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.form_Wrapper .seperate::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  width: calc(100% - 20px);
+  height: 1px;
+  background-color: #546777;
+}
+
+.form_Wrapper .seperate span {
+  display: block;
+  background-color: #fff;
+  z-index: 2;
+  padding: 0 10px;
+}
+
+.form_Wrapper .form_inner .swith_link p {
+  padding: 3px 0;
+  margin-top: 15px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.form_Wrapper .form_inner .swith_link a {
+  font-weight: 600;
+  color: #374c5e;
+}
+
+.page_wrapper .image_wrapper {
+  background-size: cover;
+  background-position: 50% 0%;
+  box-shadow: 0 -10px 10px rgb(180, 180, 180);
+}
+
+@media (max-width: 1600px) {
+  .form_Wrapper .form_inner h2 {
+    margin-bottom: 8px;
+  }
+
+  .form_Wrapper .form_inner > p {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 1200.98px) {
+  .form_Wrapper .form_inner h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .page_wrapper {
+    height: auto;
+    min-height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .page_wrapper .form_Wrapper .form_inner {
+    width: min(100%, 600px);
+  }
+
+  .page_wrapper .image_wrapper {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .page_wrapper .form_Wrapper .form_inner {
+    padding: 50px 16px;
+    min-height: calc(100vh - 400px);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .page_wrapper .form_Wrapper .form_inner {
+    padding: 30px 16px 40px;
+  }
+}
