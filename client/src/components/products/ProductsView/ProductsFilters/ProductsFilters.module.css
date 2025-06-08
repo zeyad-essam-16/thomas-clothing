@@ -4,6 +4,7 @@
   bottom: 0;
   width: 100%;
   max-width: 0;
+  pointer-events: none;
   height: calc(100vh - (var(--header-height) + 60px));
   overflow: overlay;
   background-color: #fff;
@@ -21,6 +22,7 @@
 .products_filters_wrapper.is_expanded {
   max-width: 348px;
   border-right: 1px solid #bdbdbd;
+  pointer-events: auto;
 }
 
 .products_filters_wrapper .filters_header {
@@ -192,12 +194,12 @@
     right: 0;
     height: 100%;
     width: 350px;
+    max-width: 350px;
     transform: translateX(100%);
     z-index: 999;
   }
 
   .products_filters_wrapper.is_expanded {
-    max-width: 100%;
     border-right: none;
     border-left: 1px solid #bdbdbd;
     transform: translateX(0);
@@ -253,6 +255,11 @@
 @media (max-width: 567px) {
   .products_filters_wrapper {
     width: 100%;
+    max-width: 100%;
+  }
+
+  .products_filters_wrapper.is_expanded {
+    max-width: 100%;
   }
 
   .filters_section .slider_wrapper {
