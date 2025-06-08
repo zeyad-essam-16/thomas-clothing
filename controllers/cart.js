@@ -127,3 +127,16 @@ export const removeFromCart = async (req, res, next) => {
     next(err);
   }
 };
+
+
+export const clearUserCart = async (req, res) => {
+  try {
+    const user = await User.findOne({ _id: req.user._id });
+    user.cart = [];
+    await user.save();
+    res.status(200).json({ message: "Cart cleared successfully" });
+  } catch (err) {
+    console.error("Clear cart error:", err);
+    res.status(500).json({ message: "Failed to clear cart" });
+  }
+}

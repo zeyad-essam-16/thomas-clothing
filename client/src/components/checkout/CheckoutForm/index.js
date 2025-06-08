@@ -9,6 +9,8 @@ import { ReactComponent as CashSvg } from "../../../images/cash.svg";
 import { ReactComponent as CardSvg } from "../../../images/card.svg";
 
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
+import { useDispatch } from "react-redux";
+import { clearUserCart } from "../../../redux/cartSlice";
 
 import axios from "axios";
 import classes from "./CheckoutForm.module.css";
@@ -24,6 +26,7 @@ const CheckoutForm = ({ cartState }) => {
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState("cash");
   const [formError, setFormError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const dispatch = useDispatch();
 
   const {
     value: emailValue,
@@ -146,6 +149,7 @@ const CheckoutForm = ({ cartState }) => {
         }
         if (payload.paymentIntent.status === "succeeded") {
           cardElement.clear();
+          await dispatch(clearUserCart()).unwrap();
           window.location.href = "/checkout/success?type=card";
         }
       } else {

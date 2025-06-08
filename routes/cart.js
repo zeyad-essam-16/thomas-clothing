@@ -14,4 +14,6 @@ router.post("/add-to-cart", isAuth, cartController.postAddToCart);
 
 router.delete("/remove-from-cart", isAuth, cartController.removeFromCart);
 
+router.delete("/clear-user-cart", isAuth, cartController.clearUserCart);
+
 export default router;
