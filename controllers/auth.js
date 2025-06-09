@@ -40,6 +40,7 @@ export const putSignup = async (req, res, next) => {
           _id: savedUser._id,
           username: savedUser.username,
           cart: savedUser.cart,
+          orders: [],
         },
       });
     });

@@ -29,6 +29,24 @@
   align-items: center;
 }
 
+.utility_navigation .account_link span {
+  max-width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+
+@media (max-width: 1200px) {
+  .utility_navigation .account_link span {
+    max-width: 80px;
+  }
+
+  .utility_navigation ul li.logout span {
+    display: none;
+  }
+}
+
 @media (max-width: 991.98px) {
   .utility_navigation ul .account_link,
   .utility_navigation ul li.logout {
