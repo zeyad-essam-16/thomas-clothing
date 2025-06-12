@@ -14,7 +14,7 @@ This project is a fullstack e-commerce web application built using the MERN stac
 
 - **Frontend:** React, React Router, Axios
 - **Backend:** Node.js, Express.js
-- **Database:** MongoDB (Mongoose)
+- **Database:** MongoDB (Mongoose) & Redis cashing layer
 - **Auth:** Google OAuth 2.0
 - **Payments:** Stripe.js
 - **Email:** MJML, Nodemailer, SendGrid
